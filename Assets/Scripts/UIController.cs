@@ -6,13 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
+    public GameObject helpScreen;
+    public GameObject creditsScreen;
+
+    private void Start()
+    {
+        helpScreen.SetActive(false);
+        creditsScreen.SetActive(false);
+    }
     public void OnStartButtonClick()
     {
         SceneManager.LoadScene("_Level_Select");
     }
     public void OnHelpButtonClick()
     {
-
+        helpScreen.SetActive(true);
+    }
+    public void OnCreditsButtonClick()
+    {
+        creditsScreen.SetActive(true);
+    }
+    public void OnExitButtonClick()
+    {
+        helpScreen.SetActive(false);
+        creditsScreen.SetActive(false);
     }
     public void OnLevel1ButtonClick()
     {
@@ -28,6 +45,6 @@ public class UIController : MonoBehaviour
     }
     public void OnQuitButtonClick()
     {
-        Application.Quit()
+        Application.Quit();
     }
 }
