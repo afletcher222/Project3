@@ -10,4 +10,24 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadScene("_Level_Select");
     }
+    public void OnHelpButtonClick()
+    {
+
+    }
+    public void OnLevel1ButtonClick()
+    {
+
+    }
+    public void OnLevel2ButtonClick()
+    {
+
+    }
+    public void OnLevel3ButtonClick()
+    {
+
+    }
+    public void OnQuitButtonClick()
+    {
+        Application.Quit()
+    }
 }
