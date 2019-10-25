@@ -19,6 +19,9 @@ public class PlayerScript : MonoBehaviour
 
     public LayerMask ground;
 
+    public GameObject[] puzzlePieces;
+
+
     // Start is called before the first frame update
     void Start()
     {
