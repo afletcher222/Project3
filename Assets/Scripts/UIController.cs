@@ -33,18 +33,22 @@ public class UIController : MonoBehaviour
     }
     public void OnLevel1ButtonClick()
     {
-
+        SceneManager.LoadScene("_Level_1");
     }
     public void OnLevel2ButtonClick()
     {
-
+        SceneManager.LoadScene("_Level_2");
     }
     public void OnLevel3ButtonClick()
     {
-
+        SceneManager.LoadScene("_Level_3");
     }
     public void OnQuitButtonClick()
     {
         Application.Quit();
+    }
+    public void OnBackButtonClick()
+    {
+        SceneManager.LoadScene("_Start_Screen");
     }
 }
