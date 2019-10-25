@@ -11,12 +11,6 @@ public class EnemyMovement : MonoBehaviour
     public float speed;
     public float waypointRadius = 1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
