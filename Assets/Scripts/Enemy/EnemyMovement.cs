@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
 
     public int current = 0;
 
-    public float speed;
+    public float speed = 7;
     public float waypointRadius = 1;
 
     // Update is called once per frame
