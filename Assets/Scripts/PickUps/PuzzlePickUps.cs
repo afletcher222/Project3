@@ -15,5 +15,6 @@ public class PuzzlePickUps : PickUps
     {
         puzzle.puzzleUI.color = new Color32(255, 255, 255, 255);
         puzzle.puzzlePickUp.gameObject.SetActive(false);
+        puzzle.collected = true;
     }
 }

@@ -7,4 +7,6 @@ public class PuzzlePieces : MonoBehaviour
 {
     public GameObject puzzlePickUp;
     public Image puzzleUI;
+    public bool collected;
+    public Image puzzleResultUI;
 }
