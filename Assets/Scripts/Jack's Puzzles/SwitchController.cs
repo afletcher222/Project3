@@ -15,4 +15,29 @@ public class SwitchController : MonoBehaviour
     {
         
     }
+    private void SwitchState()
+    {
+        if (switchStateRed == true && switchStateBlue == false)
+        {
+            switchStateRed = false;
+            switchStateBlue = true;
+        }
+        else if (switchStateRed == false && switchStateBlue == true)
+        {
+            switchStateRed = false;
+            switchStateBlue = true;
+        }
+        ActivatePlatforms();
+    }
+    private void ActivatePlatforms()
+    {
+        if (switchStateRed)
+        {
+
+        }
+        else if (switchStateBlue)
+        {
+
+        }
+    }
 }
