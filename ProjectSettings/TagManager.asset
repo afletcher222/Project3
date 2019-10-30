@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - ground
-  - 
+  - puzzle
   - 
   - 
   - 
@@ -42,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: puzzle
+    uniqueID: 3439120767
+    locked: 0
+  - name: Boxes
+    uniqueID: 320703667
+    locked: 0
+  - name: ground
+    uniqueID: 2180620981
     locked: 0
