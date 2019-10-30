@@ -332,7 +332,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 25961396}
   puzzleUI: {fileID: 1067019826}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 529116396}
 --- !u!212 &25961400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 450474018}
   puzzleUI: {fileID: 1726734944}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 1369981833}
 --- !u!114 &450474023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2687,7 +2687,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 450474018}
   puzzleUI: {fileID: 1726734944}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 1369981833}
 --- !u!114 &450474024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4986,7 +4986,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 793261636}
   puzzleUI: {fileID: 1162978566}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 1093521408}
 --- !u!114 &793261639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12483,7 +12483,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 2011171305}
   puzzleUI: {fileID: 996373043}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 2035391140}
 --- !u!1001 &2020765197
 PrefabInstance:
   m_ObjectHideFlags: 0
