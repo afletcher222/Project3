@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -20,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     public LayerMask ground;
 
     public GameObject[] puzzlePieces;
+
 
 
     // Start is called before the first frame update
@@ -50,7 +50,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb.velocity = new Vector2(direction * movementSpeed, rb.velocity.y);
 
-        if(isGrounded && jump)
+        if (isGrounded && jump)
         {
             isGrounded = false;
             jump = false;
@@ -60,7 +60,7 @@ public class PlayerScript : MonoBehaviour
 
     private void FlipCharacter(float direction)
     {
-        if(horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
         {
             facingRight = !facingRight;
 
@@ -73,7 +73,7 @@ public class PlayerScript : MonoBehaviour
 
     private bool IsGrounded()
     {
-        if(rb.velocity.y <= 0)
+        if (rb.velocity.y <= 0)
         {
             foreach (Transform point in groundPoints)
             {
@@ -81,7 +81,7 @@ public class PlayerScript : MonoBehaviour
 
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    if(colliders[i].gameObject != gameObject)
+                    if (colliders[i].gameObject != gameObject)
                     {
                         return true;
                     }
@@ -90,4 +90,5 @@ public class PlayerScript : MonoBehaviour
         }
         return false;
     }
+
 }
