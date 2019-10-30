@@ -3294,7 +3294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   jumpForce: 800
-  movementSpeed: 10
+  movementSpeed: 15
   groundRadius: 0.4
   isGrounded: 0
   jump: 0

@@ -72,7 +72,6 @@ public class Results : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, good job!";
-        Time.timeScale = 0;
         yield return null;
     }
 
