@@ -182,7 +182,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 25961396}
   puzzleUI: {fileID: 1067019826}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 529116396}
 --- !u!212 &25961400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 237.9}
+  m_AnchoredPosition: {x: 475, y: 261}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86894280
@@ -904,7 +904,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 450474018}
   puzzleUI: {fileID: 1726734944}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 1369981833}
 --- !u!114 &450474023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 450474018}
   puzzleUI: {fileID: 1726734944}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 1369981833}
 --- !u!114 &450474024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,7 +1186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -435, y: -51}
+  m_AnchoredPosition: {x: -435, y: -106}
   m_SizeDelta: {x: 78.19995, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &647828601
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 793261636}
   puzzleUI: {fileID: 1162978566}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 1093521408}
 --- !u!114 &793261639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 545.2, y: 237.9}
+  m_AnchoredPosition: {x: 543, y: 262}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960911814
@@ -3176,7 +3176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 403.4, y: 237.9}
+  m_AnchoredPosition: {x: 407, y: 260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1397389502
@@ -4329,7 +4329,7 @@ MonoBehaviour:
   puzzlePickUp: {fileID: 2011171305}
   puzzleUI: {fileID: 996373043}
   collected: 0
-  puzzleResultUI: {fileID: 0}
+  puzzleResultUI: {fileID: 2035391140}
 --- !u!1 &2035391138
 GameObject:
   m_ObjectHideFlags: 0
