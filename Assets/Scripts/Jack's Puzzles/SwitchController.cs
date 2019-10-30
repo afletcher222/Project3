@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class SwitchController : MonoBehaviour
 {
-    private bool switchStateRed;
+    public GameObject RedPlatformHolder;
+    public GameObject BluePlatformHolder;
+
+    public bool switchStateRed;
     private bool switchStateBlue;
 
     void Start()
@@ -15,7 +18,7 @@ public class SwitchController : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
     private void SwitchState()
     {
@@ -35,11 +38,13 @@ public class SwitchController : MonoBehaviour
     {
         if (switchStateRed)
         {
-
+            RedPlatformHolder.SetActive(true);
+            BluePlatformHolder.SetActive(false);
         }
         else if (switchStateBlue)
         {
-
+            RedPlatformHolder.SetActive(false);
+            BluePlatformHolder.SetActive(true);
         }
     }
 }
