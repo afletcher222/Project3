@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SwitchController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private bool switchStateRed;
+    private bool switchStateBlue;
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
