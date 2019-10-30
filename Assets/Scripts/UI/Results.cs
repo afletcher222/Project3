@@ -33,10 +33,11 @@ public class Results : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             resultsPanel.SetActive(true);
             StartCoroutine(PuzzleResult());
+            Time.timeScale = 0;
         }
     }
 
@@ -44,7 +45,7 @@ public class Results : MonoBehaviour
     {
         for (int i = 0; i < filledPuzzlePieces.Length; i++)
         {
-            if(filledPuzzlePieces[i].collected == true)
+            if (filledPuzzlePieces[i].collected == true)
             {
                 StartCoroutine(FadeIn(filledPuzzlePieces[i].puzzleResultUI, t));
                 t++;
@@ -78,17 +79,17 @@ public class Results : MonoBehaviour
     public void OnNextLevelButtonClick()
     {
         //For Testing Purposes
-        if(scene.name == "SampleScene")
+        if (scene.name == "SampleScene")
         {
             SceneManager.LoadScene("_Start_Screen");
         }
         //For Testing Purposes
 
-        if(scene.name == "_Level_1")
+        if (scene.name == "_Level_1")
         {
             SceneManager.LoadScene("_Level_2");
         }
-        else if(scene.name == "_Level_2")
+        else if (scene.name == "_Level_2")
         {
             SceneManager.LoadScene("_Level_3");
         }
