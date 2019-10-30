@@ -9,8 +9,9 @@ public class Box : MonoBehaviour
 
     public bool pickedUpBox;
     public bool dontInteract;
+    public bool gravity;
     public Transform boxHolder;
-
+    public LayerMask mask;
     public Box[] boxes;
 
     public void Start()
@@ -24,11 +25,24 @@ public class Box : MonoBehaviour
         {
             print("worked");
             this.gameObject.transform.SetParent(boxHolder);
-            Vector3 position = this.transform.position;
-            position.y -= 0.5f;
-            this.transform.position = position;
+            gravity = true;
             pickedUpBox = false;
             Invoke("EnablePickUp", 1f);
+        }
+        if (gravity == true)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 1f, mask);
+            print(hit.collider);
+            if (hit.collider == null)
+            {
+                Vector3 position = this.transform.position;
+                position.y -= 0.1f;
+                this.transform.position = position;
+            }
+            else if (hit.collider != null)
+            {
+                gravity = false;
+            }
         }
     }
 

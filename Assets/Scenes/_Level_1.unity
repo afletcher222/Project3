@@ -438,7 +438,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -613,7 +617,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -2318,6 +2326,10 @@ PrefabInstance:
       propertyPath: boxes.Array.data[12]
       value: 
       objectReference: {fileID: 1909342468}
+    - target: {fileID: 457007455, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
 --- !u!4 &406303265 stripped
@@ -4235,6 +4247,10 @@ PrefabInstance:
       propertyPath: boxes.Array.data[12]
       value: 
       objectReference: {fileID: 1909342468}
+    - target: {fileID: 457007455, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
 --- !u!1001 &768281468
@@ -4693,7 +4709,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -5693,7 +5713,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -7777,7 +7801,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -8599,7 +8627,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 79761938}
@@ -9960,7 +9992,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -10532,7 +10568,11 @@ MonoBehaviour:
   pickUpText: {fileID: 2122459378}
   pickedUpBox: 0
   dontInteract: 0
+  gravity: 0
   boxHolder: {fileID: 783976308}
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
   boxes:
   - {fileID: 457007455}
   - {fileID: 1576037805}
@@ -10865,6 +10905,10 @@ PrefabInstance:
       propertyPath: boxes.Array.data[12]
       value: 
       objectReference: {fileID: 1909342468}
+    - target: {fileID: 457007455, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
 --- !u!1001 &1970280912
@@ -12097,6 +12141,10 @@ PrefabInstance:
       propertyPath: boxes.Array.data[12]
       value: 
       objectReference: {fileID: 1909342468}
+    - target: {fileID: 457007455, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
 --- !u!4 &2121454554 stripped
@@ -12445,6 +12493,10 @@ PrefabInstance:
       propertyPath: boxes.Array.data[7]
       value: 
       objectReference: {fileID: 1909342468}
+    - target: {fileID: 457007455, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
+      propertyPath: mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c956958ac755d94bae4f7bdb45808d9, type: 3}
 --- !u!1001 &1849847058876078745
