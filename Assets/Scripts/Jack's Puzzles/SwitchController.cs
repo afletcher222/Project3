@@ -9,7 +9,9 @@ public class SwitchController : MonoBehaviour
 
     void Start()
     {
-        
+        switchStateRed = true;
+        switchStateBlue = false;
+        ActivatePlatforms();
     }
     void Update()
     {
