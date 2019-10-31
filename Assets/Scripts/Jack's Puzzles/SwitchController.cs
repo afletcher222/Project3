@@ -7,7 +7,7 @@ public class SwitchController : MonoBehaviour
     public GameObject RedPlatformHolder;
     public GameObject BluePlatformHolder;
 
-    public bool switchStateRed;
+    private bool switchStateRed;
     private bool switchStateBlue;
 
     void Start()
@@ -16,11 +16,7 @@ public class SwitchController : MonoBehaviour
         switchStateBlue = false;
         ActivatePlatforms();
     }
-    void Update()
-    {
-
-    }
-    private void SwitchState()
+    public void SwitchState()
     {
         if (switchStateRed == true && switchStateBlue == false)
         {
