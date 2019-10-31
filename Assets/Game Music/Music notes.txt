@@ -1,0 +1,19 @@
+Theme music for title screen and credits screen: "Sock Hop" 
+
+credits info: Music from https://filmmusic.io
+"Sock Hop" by Kevin MacLeod (https://incompetech.com)
+License: CC BY (http://creativecommons.org/licenses/by/4.0/)
+
+Level 1:Puzzle_uplifting_acoustic
+Credits info: Puzzle_uplifting_acoustic
+https://ecrettmusic.com/
+
+Level 2: Puzzle_dark
+
+Credits info: Puzzle_dark
+https://ecrettmusic.com/
+
+Level 3: Puzzle_chill_acoustic
+
+Credits info: Puzzle_chill_acoustic
+https://ecrettmusic.com/
