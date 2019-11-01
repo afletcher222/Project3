@@ -20,11 +20,16 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject[] puzzlePieces;
 
-
+    public bool deathDelay;
+    public int lives;
+    public GameObject[] livesUI;
+    public GameUIController uiController;
 
     // Start is called before the first frame update
     void Start()
     {
+        lives = 3;
+        deathDelay = false;
         facingRight = true;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -89,6 +94,35 @@ public class PlayerScript : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void TakeDamage()
+    {
+        if(lives > 0)
+        {
+            lives--;
+            livesUI[lives].SetActive(false);
+            Invoke("DeathTimer", 2f);
+
+        }
+        else
+        {
+            uiController.Death();
+        }
+    }
+
+    public void DeathTimer()
+    {
+        deathDelay = false;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy" && deathDelay == false)
+        {
+            deathDelay = true;
+            TakeDamage();
+        }
     }
 
 }

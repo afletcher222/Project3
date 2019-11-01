@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3767433742560099955}
   m_Layer: 0
   m_Name: SawContainer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 5381170461283131920}
   - component: {fileID: 5381170461283131921}
   - component: {fileID: 5381170461283132014}
+  - component: {fileID: 1546861742}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -249,3 +250,16 @@ MonoBehaviour:
   current: 0
   speed: 7
   waypointRadius: 1
+--- !u!114 &1546861742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381170461283132012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320b757eb678c5b4fb93dcddd43b48dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSec: 360

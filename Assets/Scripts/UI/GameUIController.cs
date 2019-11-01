@@ -7,18 +7,20 @@ using UnityEngine.SceneManagement;
 public class GameUIController : MonoBehaviour
 {
     public GameObject winScreen;
+    public GameObject deathScreen;
 
     private int lives;
+
+    public Scene scene;
 
     void Start()
     {
         winScreen.SetActive(false);
+        deathScreen.SetActive(false);
         lives = 3;
+        scene = SceneManager.GetActiveScene();
     }
-    void Update()
-    {
-        
-    }
+
     public void OnNextLevelButtonClick()
     {
         if (SceneManager.GetActiveScene().name == "_Level_1")
@@ -34,8 +36,19 @@ public class GameUIController : MonoBehaviour
             SceneManager.LoadScene("_level_select");
         }
     }
+
     public void OnMainMenuButtonClick()
     {
         SceneManager.LoadScene("_level_select");
+    }
+
+    public void Death()
+    {
+        deathScreen.SetActive(true);
+    }
+
+    public void OnRetryButtonClick()
+    {
+        SceneManager.LoadScene(scene.name);
     }
 }
