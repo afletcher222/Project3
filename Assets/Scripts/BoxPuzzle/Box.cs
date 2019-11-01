@@ -13,10 +13,12 @@ public class Box : MonoBehaviour
     public Transform boxHolder;
     public LayerMask mask;
     public Box[] boxes;
+    public Vector3 initialLocation;
 
     public void Start()
     {
         pickUpText.gameObject.SetActive(false);
+        initialLocation = transform.position;
     }
 
     public void FixedUpdate()
@@ -27,12 +29,12 @@ public class Box : MonoBehaviour
             this.gameObject.transform.SetParent(boxHolder);
             gravity = true;
             pickedUpBox = false;
-            Invoke("EnablePickUp", 1f);
+            Invoke("EnablePickUp", 2f);
         }
         if (gravity == true)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 1f, mask);
-            print(hit.collider);
+            //print(hit.collider);
             if (hit.collider == null)
             {
                 Vector3 position = this.transform.position;
@@ -84,6 +86,15 @@ public class Box : MonoBehaviour
         for (int i = 0; i < boxes.Length; i++)
         {
             boxes[i].dontInteract = false;
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Deathzone")
+        {
+            transform.position = initialLocation;
+            print("collided");
         }
     }
 }

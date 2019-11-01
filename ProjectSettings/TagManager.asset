@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Box
   - Lever
+  - Deathzone
   layers:
   - Default
   - TransparentFX

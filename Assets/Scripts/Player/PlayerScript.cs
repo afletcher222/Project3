@@ -123,6 +123,11 @@ public class PlayerScript : MonoBehaviour
             deathDelay = true;
             TakeDamage();
         }
+        else if(collision.gameObject.tag == "Deathzone")
+        {
+            uiController.Death();
+        }
     }
+
 
 }
