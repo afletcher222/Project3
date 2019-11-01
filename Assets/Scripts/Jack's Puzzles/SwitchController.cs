@@ -7,7 +7,9 @@ public class SwitchController : MonoBehaviour
     public GameObject RedPlatformHolder;
     public GameObject BluePlatformHolder;
 
+    [SerializeField]
     private bool switchStateRed;
+    [SerializeField]
     private bool switchStateBlue;
 
     void Start()
@@ -25,8 +27,8 @@ public class SwitchController : MonoBehaviour
         }
         else if (switchStateRed == false && switchStateBlue == true)
         {
-            switchStateRed = false;
-            switchStateBlue = true;
+            switchStateRed = true;
+            switchStateBlue = false;
         }
         ActivatePlatforms();
     }
