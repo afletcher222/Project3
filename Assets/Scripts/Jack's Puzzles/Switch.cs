@@ -17,7 +17,6 @@ public class Switch : MonoBehaviour
             isColliding = true;
         }
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && isColliding)
