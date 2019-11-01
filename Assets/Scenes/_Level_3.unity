@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8499,7 +8499,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedPlatformHolder: {fileID: 1053099639}
   BluePlatformHolder: {fileID: 5066412}
-  switchStateRed: 1
 --- !u!1 &1522042947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10136,6 +10135,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5713661045343369495, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: switchController
+      value: 
+      objectReference: {fileID: 1506955420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165490d984ebb0146ab8a0c199af0bcd, type: 3}
 --- !u!4 &1841038068 stripped

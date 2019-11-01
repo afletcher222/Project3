@@ -5,16 +5,25 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     private bool dontInteract;
+    public SwitchController switchController;
+
+    [SerializeField]
+    private bool isColliding = false;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                SwitchController switchController = gameObject.GetComponent(typeof(SwitchController)) as SwitchController;
-                switchController.SwitchState();
-            }
+            isColliding = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && isColliding)
+        {
+            switchController.SwitchState();
+            isColliding = false;
         }
     }
 }
