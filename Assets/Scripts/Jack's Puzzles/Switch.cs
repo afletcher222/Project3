@@ -6,9 +6,15 @@ public class Switch : MonoBehaviour
 {
     private bool dontInteract;
     public SwitchController switchController;
+    public GameObject pickUpText;
 
     [SerializeField]
     private bool isColliding = false;
+
+    private void Start()
+    {
+        pickUpText.SetActive(false);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -24,5 +30,15 @@ public class Switch : MonoBehaviour
             switchController.SwitchState();
             isColliding = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        pickUpText.SetActive(true);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        pickUpText.SetActive(false);
     }
 }
