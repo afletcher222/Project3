@@ -9,7 +9,7 @@ public class ButtonTestScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HelpPanel.SetActive(true);
+        HelpPanel.SetActive(false);
     }
 
     // Update is called once per frame
