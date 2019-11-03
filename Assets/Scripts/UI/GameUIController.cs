@@ -9,7 +9,6 @@ public class GameUIController : MonoBehaviour
     public GameObject winScreen;
     public GameObject deathScreen;
 
-    private int lives;
 
     public Scene scene;
 
@@ -17,7 +16,6 @@ public class GameUIController : MonoBehaviour
     {
         winScreen.SetActive(false);
         deathScreen.SetActive(false);
-        lives = 3;
         scene = SceneManager.GetActiveScene();
     }
 
@@ -33,13 +31,13 @@ public class GameUIController : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("_level_select");
+            SceneManager.LoadScene("_Level_Select");
         }
     }
 
     public void OnMainMenuButtonClick()
     {
-        SceneManager.LoadScene("_level_select");
+        SceneManager.LoadScene("_Start_Screen");
     }
 
     public void Death()

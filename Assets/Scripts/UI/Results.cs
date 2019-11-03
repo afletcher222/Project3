@@ -71,7 +71,26 @@ public class Results : MonoBehaviour
     IEnumerator WaitForPuzzlePieces(float time)
     {
         yield return new WaitForSeconds(time);
-        resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, good job!";
+        if(puzzleCounter == 0)
+        {
+            resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, try harder next time!";
+        }
+        else if (puzzleCounter == 1)
+        {
+            resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, really?";
+        }
+        else if (puzzleCounter == 2)
+        {
+            resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, not terrible.";
+        }
+        else if (puzzleCounter == 3)
+        {
+            resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, so close, yet so far away!";
+        }
+        else if (puzzleCounter == 4)
+        {
+            resultText.text = "You colleded " + puzzleCounter + "/4 puzzle pieces, Boom!";
+        }
         yield return null;
     }
 

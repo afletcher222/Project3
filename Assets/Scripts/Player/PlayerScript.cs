@@ -25,6 +25,10 @@ public class PlayerScript : MonoBehaviour
     public GameObject[] livesUI;
     public GameUIController uiController;
 
+    public float jumpVelocity = 16f;
+    public float fallMultiplier = 3f;
+    public float lowJumpMultiplier = 2.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +45,15 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+        }
+
+        if(rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if(rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
 
@@ -59,7 +72,8 @@ public class PlayerScript : MonoBehaviour
         {
             isGrounded = false;
             jump = false;
-            rb.AddForce(new Vector2(0, jumpForce));
+            //rb.AddForce(new Vector2(0, jumpForce));
+            rb.velocity = Vector2.up * jumpVelocity;
         }
     }
 
