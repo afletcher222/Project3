@@ -1405,9 +1405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Piece of the Puzzle
-
-'
+  m_Text: Puzzle Pursuit
 --- !u!222 &526046466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4180,10 +4178,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome to Piece of the Puzzle. The goal of the game is to find the hidden
-    puzzle pieces throught the level. Make sure you pay attention to your suroundings,
-    as you will find objects you will be able to interact with. But beware of the
-    spiked blocks and the saws scattered around the level, they will reduce your life!
+  m_Text: Welcome to Puzzle Pursuit. The goal of the game is to find the hidden puzzle
+    pieces throught the level. Make sure you pay attention to your suroundings, as
+    you will find objects you will be able to interact with. But beware of the spiked
+    blocks and the saws scattered around the level, they will reduce your life!
 --- !u!222 &1423089642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4628,7 +4626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -757, y: -432}
+  m_AnchoredPosition: {x: -747.2, y: -432}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618778126
@@ -4853,9 +4851,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Piece of the Puzzle
-
-'
+  m_Text: Puzzle Pursuit
 --- !u!222 &1741116887
 CanvasRenderer:
   m_ObjectHideFlags: 0
