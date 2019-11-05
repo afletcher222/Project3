@@ -29,6 +29,8 @@ public class PlayerScript : MonoBehaviour
     public float fallMultiplier = 3f;
     public float lowJumpMultiplier = 2.5f;
 
+    public AudioSource jumpAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class PlayerScript : MonoBehaviour
         }
         else if(rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
         {
+            jumpAudio.Play();
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
@@ -142,6 +145,4 @@ public class PlayerScript : MonoBehaviour
             uiController.Death();
         }
     }
-
-
 }
