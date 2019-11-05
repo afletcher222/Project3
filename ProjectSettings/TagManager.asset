@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: eyes
+    uniqueID: 1742886771
+    locked: 0
   - name: switches
     uniqueID: 1932124769
     locked: 0
