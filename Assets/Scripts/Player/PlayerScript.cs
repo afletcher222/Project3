@@ -49,11 +49,11 @@ public class PlayerScript : MonoBehaviour
             jump = true;
         }
 
-        if(rb.velocity.y < 0)
+        if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if(rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+        else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
         {
             jumpAudio.Play();
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
@@ -115,7 +115,7 @@ public class PlayerScript : MonoBehaviour
 
     public void TakeDamage()
     {
-        if(lives > 0)
+        if (lives > 0)
         {
             lives--;
             livesUI[lives].SetActive(false);
@@ -135,12 +135,12 @@ public class PlayerScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" && deathDelay == false)
+        if (collision.gameObject.tag == "Enemy" && deathDelay == false)
         {
             deathDelay = true;
             TakeDamage();
         }
-        else if(collision.gameObject.tag == "Deathzone")
+        else if (collision.gameObject.tag == "Deathzone")
         {
             uiController.Death();
         }
