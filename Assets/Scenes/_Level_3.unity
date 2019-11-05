@@ -244,6 +244,16 @@ PrefabInstance:
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 1478372096}
+    - target: {fileID: 5447787042157279558, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1932124769
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447787042157279558, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165490d984ebb0146ab8a0c199af0bcd, type: 3}
 --- !u!4 &7548333 stripped
@@ -3592,6 +3602,16 @@ PrefabInstance:
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 1478372096}
+    - target: {fileID: 5447787042157279558, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1932124769
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447787042157279558, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165490d984ebb0146ab8a0c199af0bcd, type: 3}
 --- !u!4 &749627337 stripped
@@ -9892,6 +9912,16 @@ PrefabInstance:
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 1478372096}
+    - target: {fileID: 5447787042157279558, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1932124769
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447787042157279558, guid: 165490d984ebb0146ab8a0c199af0bcd,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165490d984ebb0146ab8a0c199af0bcd, type: 3}
 --- !u!4 &1841038068 stripped
