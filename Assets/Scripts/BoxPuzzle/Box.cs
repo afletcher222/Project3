@@ -21,7 +21,7 @@ public class Box : MonoBehaviour
         initialLocation = transform.position;
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && pickedUpBox == true)
         {
@@ -62,7 +62,7 @@ public class Box : MonoBehaviour
                     Vector3 position = this.transform.position;
                     position.y += 0.5f;
                     this.transform.position = position;
-                    pickedUpBox = true;
+                    Invoke("PicedUPABox", 0.2f);
                     for (int i = 0; i < boxes.Length; i++)
                     {
                         boxes[i].dontInteract = true;
@@ -96,5 +96,10 @@ public class Box : MonoBehaviour
             transform.position = initialLocation;
             print("collided");
         }
+    }
+
+    public void PicedUPABox()
+    {
+        pickedUpBox = true;
     }
 }
