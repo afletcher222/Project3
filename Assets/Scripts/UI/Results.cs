@@ -13,9 +13,12 @@ public class Results : MonoBehaviour
     public Text resultText;
     public int puzzleCounter;
 
+    public PlayerScript player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerScript>();
         resultsPanel.SetActive(false);
         t = 1;
         resultText.text = "";
@@ -35,6 +38,7 @@ public class Results : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            player.canPlay = false;
             resultsPanel.SetActive(true);
             StartCoroutine(PuzzleResult());
         }
