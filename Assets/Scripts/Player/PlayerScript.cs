@@ -31,6 +31,8 @@ public class PlayerScript : MonoBehaviour
 
     public AudioSource jumpAudio;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class PlayerScript : MonoBehaviour
         deathDelay = false;
         facingRight = true;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,15 @@ public class PlayerScript : MonoBehaviour
         {
             jumpAudio.Play();
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
+        if(horizontal == 0)
+        {
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
         }
     }
 
