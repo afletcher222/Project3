@@ -57,14 +57,6 @@ public class PlayerScript : MonoBehaviour
                 jump = true;
                 anim.SetTrigger("takeOff");
             }
-
-<<<<<<< HEAD
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
-=======
             if (rb.velocity.y < 0)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -89,8 +81,7 @@ public class PlayerScript : MonoBehaviour
                 anim.SetBool("isRunning", true);
             }
         }
-        else if(canPlay == false)
->>>>>>> 9f0961f32c10d726e1922a5fe3c1c5fff232ce00
+        else if (canPlay == false)
         {
             rb.velocity = Vector2.zero;
         }
