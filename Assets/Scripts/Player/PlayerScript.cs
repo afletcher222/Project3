@@ -33,6 +33,8 @@ public class PlayerScript : MonoBehaviour
 
     public Animator anim;
 
+    public bool canPlay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,34 +43,48 @@ public class PlayerScript : MonoBehaviour
         facingRight = true;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        canPlay = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump"))
+        if (canPlay == true)
         {
-            jump = true;
-        }
+            horizontal = Input.GetAxis("Horizontal");
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                anim.SetTrigger("takeOff");
+            }
 
-        if(rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if(rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
-        {
-            jumpAudio.Play();
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                anim.SetBool("isJumping", true);
+            }
 
-        if(horizontal == 0)
-        {
-            anim.SetBool("isRunning", false);
+            if (rb.velocity.y == 0)
+            {
+                anim.SetBool("isJumping", false);
+            }
+
+            if (horizontal == 0)
+            {
+                anim.SetBool("isRunning", false);
+            }
+            else
+            {
+                anim.SetBool("isRunning", true);
+            }
         }
-        else
+        else if(canPlay == false)
         {
-            anim.SetBool("isRunning", true);
+            rb.velocity = Vector2.zero;
         }
     }
 
@@ -89,6 +105,7 @@ public class PlayerScript : MonoBehaviour
             jump = false;
             //rb.AddForce(new Vector2(0, jumpForce));
             rb.velocity = Vector2.up * jumpVelocity;
+            jumpAudio.Play();
         }
     }
 
