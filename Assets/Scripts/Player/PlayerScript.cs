@@ -55,7 +55,8 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
-                anim.SetTrigger("takeOff");
+                anim.SetBool("takeOff", true);
+                Invoke("TakeOffFalse", 0.1f);
             }
             if (rb.velocity.y < 0)
             {
@@ -64,7 +65,6 @@ public class PlayerScript : MonoBehaviour
             else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-                anim.SetBool("isJumping", true);
             }
 
             if (rb.velocity.y == 0)
@@ -72,13 +72,13 @@ public class PlayerScript : MonoBehaviour
                 anim.SetBool("isJumping", false);
             }
 
-            if (horizontal == 0)
+            if (Input.GetButton("Horizontal"))
             {
-                anim.SetBool("isRunning", false);
+                anim.SetBool("isRunning", true);
             }
             else
             {
-                anim.SetBool("isRunning", true);
+                anim.SetBool("isRunning", false);
             }
         }
         else if (canPlay == false)
@@ -97,13 +97,13 @@ public class PlayerScript : MonoBehaviour
     private void Move(float direction)
     {
         rb.velocity = new Vector2(direction * movementSpeed, rb.velocity.y);
-
         if (isGrounded && jump)
         {
             isGrounded = false;
             jump = false;
             //rb.AddForce(new Vector2(0, jumpForce));
             rb.velocity = Vector2.up * jumpVelocity;
+            anim.SetBool("isJumping", true);
             jumpAudio.Play();
         }
     }
@@ -152,6 +152,7 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
+            canPlay = false;
             uiController.Death();
         }
     }
@@ -172,5 +173,10 @@ public class PlayerScript : MonoBehaviour
         {
             uiController.Death();
         }
+    }
+
+    public void TakeOffFalse()
+    {
+        anim.SetBool("takeOff", false);
     }
 }
