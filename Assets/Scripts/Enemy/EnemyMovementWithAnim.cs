@@ -17,6 +17,9 @@ public class EnemyMovementWithAnim : MonoBehaviour
         if (Vector3.Distance(waypoints[current].position, transform.position) < waypointRadius)
         {
             current++;
+                Vector3 scale = transform.localScale;
+                scale.x *= -1;
+                transform.localScale = scale;
             if (current >= waypoints.Length)
             {
                 current = 0;
