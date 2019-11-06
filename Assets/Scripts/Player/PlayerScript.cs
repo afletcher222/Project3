@@ -58,6 +58,13 @@ public class PlayerScript : MonoBehaviour
                 anim.SetTrigger("takeOff");
             }
 
+<<<<<<< HEAD
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+=======
             if (rb.velocity.y < 0)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -83,6 +90,7 @@ public class PlayerScript : MonoBehaviour
             }
         }
         else if(canPlay == false)
+>>>>>>> 9f0961f32c10d726e1922a5fe3c1c5fff232ce00
         {
             rb.velocity = Vector2.zero;
         }
@@ -144,7 +152,7 @@ public class PlayerScript : MonoBehaviour
 
     public void TakeDamage()
     {
-        if(lives > 0)
+        if (lives > 0)
         {
             lives--;
             livesUI[lives].SetActive(false);
@@ -164,12 +172,12 @@ public class PlayerScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" && deathDelay == false)
+        if (collision.gameObject.tag == "Enemy" && deathDelay == false)
         {
             deathDelay = true;
             TakeDamage();
         }
-        else if(collision.gameObject.tag == "Deathzone")
+        else if (collision.gameObject.tag == "Deathzone")
         {
             uiController.Death();
         }
