@@ -31,6 +31,10 @@ public class PlayerScript : MonoBehaviour
 
     public AudioSource jumpAudio;
 
+    public Animator anim;
+
+    public bool canPlay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,25 +42,57 @@ public class PlayerScript : MonoBehaviour
         deathDelay = false;
         facingRight = true;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
+        canPlay = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump"))
+        if (canPlay == true)
         {
-            jump = true;
-        }
+            horizontal = Input.GetAxis("Horizontal");
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                anim.SetTrigger("takeOff");
+            }
 
+<<<<<<< HEAD
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+=======
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                anim.SetBool("isJumping", true);
+            }
+
+            if (rb.velocity.y == 0)
+            {
+                anim.SetBool("isJumping", false);
+            }
+
+            if (horizontal == 0)
+            {
+                anim.SetBool("isRunning", false);
+            }
+            else
+            {
+                anim.SetBool("isRunning", true);
+            }
+        }
+        else if(canPlay == false)
+>>>>>>> 9f0961f32c10d726e1922a5fe3c1c5fff232ce00
         {
-            jumpAudio.Play();
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            rb.velocity = Vector2.zero;
         }
     }
 
@@ -77,6 +113,7 @@ public class PlayerScript : MonoBehaviour
             jump = false;
             //rb.AddForce(new Vector2(0, jumpForce));
             rb.velocity = Vector2.up * jumpVelocity;
+            jumpAudio.Play();
         }
     }
 
