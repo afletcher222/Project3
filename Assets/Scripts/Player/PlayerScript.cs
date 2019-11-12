@@ -150,7 +150,7 @@ public class PlayerScript : MonoBehaviour
             Invoke("DeathTimer", 2f);
 
         }
-        else
+        if(lives == 0)
         {
             canPlay = false;
             uiController.Death();
