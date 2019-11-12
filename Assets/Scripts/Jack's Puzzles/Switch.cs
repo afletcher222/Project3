@@ -34,11 +34,17 @@ public class Switch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pickUpText.SetActive(true);
+        if (collision.gameObject.tag == "Player")
+        {
+            pickUpText.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        pickUpText.SetActive(false);
+        if (collision.gameObject.tag == "Player")
+        {
+            pickUpText.SetActive(false);
+        }
     }
 }
