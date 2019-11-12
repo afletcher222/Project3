@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     public float lowJumpMultiplier = 2.5f;
 
     public AudioSource jumpAudio;
+    public AudioSource enemyAudio;
 
     public Animator anim;
 
@@ -168,6 +169,7 @@ public class PlayerScript : MonoBehaviour
         {
             deathDelay = true;
             TakeDamage();
+            enemyAudio.Play();
         }
         else if (collision.gameObject.tag == "Deathzone")
         {

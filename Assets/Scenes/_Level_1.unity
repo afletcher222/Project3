@@ -3069,8 +3069,6 @@ GameObject:
   - component: {fileID: 450474022}
   - component: {fileID: 450474021}
   - component: {fileID: 450474025}
-  - component: {fileID: 450474024}
-  - component: {fileID: 450474023}
   m_Layer: 9
   m_Name: P1-1stpiece
   m_TagString: Untagged
@@ -3170,36 +3168,6 @@ MonoBehaviour:
   puzzleUI: {fileID: 1726734944}
   collected: 0
   puzzleResultUI: {fileID: 1369981833}
---- !u!114 &450474023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450474018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315f8ddde5f496c4ba76580430f26635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzlePickUp: {fileID: 450474018}
-  puzzleUI: {fileID: 1726734944}
-  collected: 0
-  puzzleResultUI: {fileID: 0}
---- !u!114 &450474024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450474018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d453bbb9269e54ea91bc5867c303eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzle: {fileID: 0}
-  puzzleAudio: {fileID: 0}
 --- !u!61 &450474025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9235,6 +9203,7 @@ MonoBehaviour:
   fallMultiplier: 3
   lowJumpMultiplier: 2.5
   jumpAudio: {fileID: 1488767389}
+  enemyAudio: {fileID: 1605158235}
   anim: {fileID: 0}
   canPlay: 0
 --- !u!61 &1488767386
@@ -9980,6 +9949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605158234}
+  - component: {fileID: 1605158235}
   m_Layer: 0
   m_Name: EnemyContainer
   m_TagString: Untagged
@@ -10006,6 +9976,102 @@ Transform:
   m_Father: {fileID: 165659794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1605158235
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605158233}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2a91c7206a716cb429223cf8808e3949, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1613314622
 PrefabInstance:
   m_ObjectHideFlags: 0
